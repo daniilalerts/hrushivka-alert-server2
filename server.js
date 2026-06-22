@@ -11,7 +11,7 @@ initializeApp({
 const app = express();
 app.use(express.json());
 
-const ADMIN_KEY = "1234";
+const ADMIN_KEY = "alarm1234";
 
 app.post("/send-alert", async (req, res) => {
   try {
