@@ -44,14 +44,13 @@ const alerts = {
 async function sendPush(title, body) {
   await getMessaging().send({
     topic: "hrushivka_alerts",
-    notification: { title, body },
-    android: {
-      priority: "high",
-      notification: {
-        sound: "default",
-        channelId: "alerts_channel",
-      },
+    data: {
+      title: title,
+      body: body
     },
+    android: {
+      priority: "high"
+    }
   });
 }
 
