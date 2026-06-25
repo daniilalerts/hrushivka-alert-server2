@@ -13,6 +13,8 @@ app.use(express.json());
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const ADMIN_ID = Number(process.env.TELEGRAM_ADMIN_ID);
+const TELEGRAM_ADMIN_PASSWORD = process.env.TELEGRAM_ADMIN_PASSWORD || "hrushivka_alerts_admin";
+const telegramAdmins = new Set();
 const BASE_URL = process.env.BASE_URL;
 
 const buttons = [
